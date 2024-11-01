@@ -1,0 +1,166 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Global Styles */
+body {
+    background-color: #e6f4f8; /* Light blue background */
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header and Navigation */
+header {
+    background: linear-gradient(135deg, #4da8da, #006494); /* Light blue gradient */
+    color: #fff;
+    padding: 1.5em 0;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 2.8em;
+    font-weight: bold;
+    margin-bottom: 0.25em;
+}
+
+header p {
+    font-size: 1.2em;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    margin-top: 1em;
+}
+
+nav a {
+    color: black
+    text-decoration: none;
+    margin: 0 1.5em;
+    font-size: 1.1em;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: lightblue;
+}
+
+
+.container {
+    max-width: 900px;
+    margin: 2em auto;
+    padding: 2em;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1.2s ease-in;
+}
+
+#about {
+    text-align: center;
+}
+
+#about h2 {
+    font-size: 2em;
+    margin-bottom: 1em;
+    color: black; 
+}
+
+#about p {
+    font-size: 1.1em;
+    color: black; 
+    line-height: 1.8;
+}
+
+.reservation-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.reservation-form label {
+    font-size: 1.1em;
+    color: #006494; 
+}
+
+.reservation-form input[type="text"],
+.reservation-form input[type="date"],
+.reservation-form select {
+    padding: 0.75em;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 0.8em;
+    font-size: 1.1em;
+    background: #4da8da; 
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background-color: #006494; 
+}
+
+/* Contact Page Styles */
+.contact-info, .contact-form {
+    margin-bottom: 1.5em;
+}
+
+.contact-form label {
+    font-size: 1.1em;
+    color: #006494; 
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%;
+    padding: 0.75em;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.contact-form button {
+    width: 100%;
+    padding: 0.8em;
+    font-size: 1.1em;
+    background: #4da8da;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #006494;
+    color: #fff;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
