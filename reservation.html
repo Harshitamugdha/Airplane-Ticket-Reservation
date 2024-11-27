@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Book Your Flight - FlyAway Airlines</title>
     <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
 </head>
 <body>
-
     <header>
         <h1>FlyAway Airlines</h1>
         <p>Your journey starts here!</p>
@@ -15,33 +15,63 @@
 
     <nav>
         <a href="index.html">Home</a>
-        <a href="reservation.html">Book a Ticket</a>
+        <a href="reservation.html" class="active">Book a Ticket</a>
         <a href="contact.html">Contact Us</a>
     </nav>
 
     <div class="container">
-        <h2>Book a Flight</h2>
+        <h2>Book Your Flight</h2>
+        <p>
+            Whether you're traveling for business or leisure, FlyAway Airlines has got you covered! Fill out the form below to search for available flights and secure your seat today. Let us make your journey as seamless and comfortable as possible.
+        </p>
+
         <form class="reservation-form">
+            <h3>Flight Details</h3>
             <label for="origin">Origin:</label>
-            <input type="text" id="origin" placeholder="Enter your origin city" required>
+            <input type="text" id="origin" placeholder="Enter your origin city or airport code" required>
 
             <label for="destination">Destination:</label>
-            <input type="text" id="destination" placeholder="Enter your destination city" required>
+            <input type="text" id="destination" placeholder="Enter your destination city or airport code" required>
 
-            <label for="date">Date:</label>
+            <label for="date">Departure Date:</label>
             <input type="date" id="date" required>
 
-            <label for="passengers">Passengers:</label>
+            <label for="return-date">Return Date (Optional):</label>
+            <input type="date" id="return-date">
+
+            <label for="travel-class">Travel Class:</label>
+            <select id="travel-class">
+                <option value="economy">Economy</option>
+                <option value="business">Business</option>
+                <option value="first-class">First Class</option>
+            </select>
+
+            <label for="passengers">Number of Passengers:</label>
             <select id="passengers">
                 <option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
                 <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="group">7 or more (Group Booking)</option>
             </select>
+
+            <h3>Additional Preferences</h3>
+            <label for="meal">Meal Preference:</label>
+            <select id="meal">
+                <option value="vegetarian">Vegetarian</option>
+                <option value="non-vegetarian">Non-Vegetarian</option>
+                <option value="vegan">Vegan</option>
+                <option value="gluten-free">Gluten-Free</option>
+                <option value="no-preference">No Preference</option>
+            </select>
+
+            <label for="special-requests">Special Requests:</label>
+            <textarea id="special-requests" placeholder="Enter any special requests or needs (e.g., wheelchair assistance)"></textarea>
 
             <button type="submit">Search Flights</button>
         </form>
     </div>
-
 </body>
 </html>
